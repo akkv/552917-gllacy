@@ -6,33 +6,47 @@
     <title>Каталог - Магазин мороженого Gllacy</title>
   </head>
   <body>
-    <header class="page-header">  
-      <nav class="page-nav">
-        <a href="index.html"><img src="#" width="154" height="64" alt="Gllacy"></a>
-        <ul class="page-nav_items">
-          <li class="page-nav_item"><a class="page-nav_link--active" href="#">Каталог</a></li>
-          <li class="page-nav_item"><a class="page-nav_link" href="#">Доставка и оплата</a></li>
-          <li class="page-nav_item"><a class="page-nav_link" href="#">О компании</a></li>
+    <header class="main-header">
+      <nav class="main-nav">
+        <a href="index.html">
+          <img class="logo" src="img/logo.svg" width="155" height="64" alt="Gllacy">
+        </a>
+        <ul class="main-menu">
+          <li>
+            <a class="main-link" href="#">Каталог</a>
+          </li>
+          <li>
+            <a class="main-link" href="#">Доставка и оплата</a>
+          </li>
+          <li>
+            <a class="main-link" href="#">О компании</a>
+          </li>
         </ul>
-        <ul class="header-btns_items">
-          <li class="header-btns_item"><a href="#">Поиск</a></li>
-          <li class="header-btns_item"><a href="#">Вход</a></li>
-          <li class="header-btns_item--active"><a href="#">2 товара</a></li>
+        <ul class="main-user">
+          <li>
+            <a class="user-btn search-btn" href="#">Поиск</a>
+          </li>
+          <li>
+            <a class="user-btn login-btn" href="#">Вход</a>
+          </li>
+          <li>
+            <a class="user-btn basket-btn" href="#">Пусто</a>
+          </li>
         </ul>
-      </nav>      
-      <p class="header-contacts">С 10 до 20, ежедневно<span class="header-contacts_number">88124502525</span></p> 
+      </nav>
+      <p class="header-time">С 10 до 20, ежедневно
+        <span class="header-phone">88124502525</span>
+      </p>
     </header>
     <main class="page-container">
-      <ul class="breadcrumbs_items">
-        <li class="breadcrumbs_item">
-          <a class="breadcrumbs_link" href="#">Главная</a>
+      <ul class="breadcrumbs">
+        <li>
+          <a class="breadcrumb_link" href="#">Главная</a>
         </li>
-        <li class="breadcrumbs_item">
-          <a class="breadcrumbs_link" href="#">Каталог</a>
+        <li>
+          <a class="breadcrumb_link" href="#">Каталог</a>
         </li>
-        <li class="breadcrumbs_item">
-          Сливочное
-        </li>
+        <li>Сливочное</li>
       </ul>
       <h1>Сливочное мороженое</h1>
       <section class="filter">
@@ -42,116 +56,136 @@
           <li class="filter_item">Цена 100 руб. - 500 руб.</li>
           <li class="filter_item">Жирность:</li>
           <li class="filter_item">Наполнители:</li>
-          <li class="filter_item"><input type="submit" name="search-form_btn" value="Применить"></li>
+          <li class="filter_item">
+            <input type="submit" name="search-form_btn" value="Применить">
+          </li>
         </ul>
       </section>
-      <section class="prod">
+      <section class="products">
         <h2 class="visually-hiden">Результаты поиска:</h2>
-        <ul class="prod_items">
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">310&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой
+        <ul class="product">
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">310&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">380&#8381;</span><span class="prod_item_price2">/кг</span>Сливочно-кофейное с кусочками шоколада
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">380&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочно-кофейное с кусочками шоколада
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">355&#8381;</span><span class="prod_item_price2">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">355&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">415&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное крем-брюле с карамельной подливкой
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">415&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное крем-брюле с карамельной подливкой
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">380&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное с брусничным джемом
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">380&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное с брусничным джемом
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">355&#8381;</span><span class="prod_item_price2">/кг</span>Сливочно-черничное с цельными ягодами черники
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">355&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочно-черничное с цельными ягодами черники
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">415&#8381;</span><span class="prod_item_price2">/кг</span>Сливочно-лимонное с карамельной присыпкой
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">415&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочно-лимонное с карамельной присыпкой
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">380&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное с шоколадной стружкой
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">380&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное с шоколадной стружкой
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">355&#8381;</span><span class="prod_item_price2">/кг</span>Сливочно-ванильное с кусочками шоколада
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">355&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочно-ванильное с кусочками шоколада
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">415&#8381;</span><span class="prod_item_price2">/кг</span>Сливочноe с ментоловым сиропом
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">415&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочноe с ментоловым сиропом
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">380&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное с кусочками черного шоколада
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">380&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное с кусочками черного шоколада
             </a>
           </li>
-          <li class="prod_item">
-            <a class="prod_item_link" href="#">
-              <span class="prod_item_price">355&#8381;</span><span class="prod_item_price2">/кг</span>Сливочное с мятным сиропом
+          <li class="ice">
+            <a class="ice_link" href="#">
+              <span class="ice_price">355&#8381;</span>
+              <span class="ice_price2">/кг</span>Сливочное с мятным сиропом
             </a>
           </li>
         </ul>
       </section>
-      <ul class="pagination_items">
-        <li class="pagination_item"><a class="pagination_link--inactive" href="#">&lt;</a></li>
-        <li class="pagination_item"><a class="pagination_link--active" href="#">1</a></li>
-        <li class="pagination_item"><a class="pagination_link" href="#">2</a></li>
-        <li class="pagination_item"><a class="pagination_link" href="#">3</a></li>
-        <li class="pagination_item"><a class="pagination_link" href="#">4</a></li>
-        <li class="pagination_item"><a class="pagination_link" href="#">5</a></li>
-        <li class="pagination_item"><a class="pagination_link" href="#">&gt;</a></li>
+      <ul class="paginator">
+        <li>
+          <a class="paginator_link--inactive" href="#">&lt;</a>
+        </li>
+        <li>
+          <a class="paginator_link--active" href="#">1</a>
+        </li>
+        <li>
+          <a class="paginator_link" href="#">2</a>
+        </li>
+        <li>
+          <a class="paginator_link" href="#">3</a>
+        </li>
+        <li>
+          <a class="paginator_link" href="#">4</a>
+        </li>
+        <li>
+          <a class="paginator_link" href="#">5</a>
+        </li>
+        <li>
+          <a class="paginator_link" href="#">&gt;</a>
+        </li>
       </ul>
     </main>
-    <footer class="page-footer">
-      <ul class="social_items">
-        <li class="social_item">
-          <a class="tw" href="#">Twitter</a>
+    <footer class="main-footer">
+      <div class="footer-socials">
+        <a class="social tw" href="#">Twitter</a>
+        <a class="social inst" href="#">Instagram</a>
+        <a class="social fb" href="#">Facebook</a>
+        <a class="social vk" href="#">Vkontakte</a>
+      </div>
+      <ul class="footer-information">
+        <li>
+          <a class="footer-inf" href="#">Для поставщиков</a>
         </li>
-        <li class="social_item">
-          <a class="inst" href="#">Instagram</a>
+        <li>
+          <a class="footer-inf" href="#">О производстве</a>
         </li>
-        <li class="social_item">
-          <a class="fb" href="#">Facebook</a>
+        <li>
+          <a class="footer-inf" href="#">Наши документы</a>
         </li>
-        <li class="social_item">
-            <a class="vk" href="#">Vkontakte</a>
-        </li>
-      </ul>
-      <ul class="footer-nav_items">
-        <li class="footer-nav_item">
-          <a class="footer-nav_link" href="#">Для поставщиков</a>
-        </li>
-        <li class="footer-nav_item">
-          <a class="footer-nav_link" href="#">О производстве</a>
-        </li>
-        <li class="footer-nav_item">
-          <a class="footer-nav_link" href="#">Наши документы</a>
-        </li>
-        <li class="footer-nav_item">
-          <a class="footer-nav_link" href="#">Экологические стандарты</a>
+        <li>
+          <a class="footer-inf" href="#">Экологические стандарты</a>
         </li>
       </ul>
-      <a class="copyright_link" href="#">
-        <img class="copyright_logo" src="#" width="108" height="39" alt="html Academy">
-        Сделано в <span class="copyright_text">HTML Academy</span> © 2017
+      <a class="copyright" href="#">
+        <img class="copyright_logo" src="#" width="108" height="39" alt="html Academy"> Сделано в
+        <span class="copyright_text">HTML Academy</span> © 2017
       </a>
     </footer>
   </body>
