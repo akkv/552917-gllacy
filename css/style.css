@@ -1,4 +1,5 @@
-.main-nav .logo {
+.main-nav .logo,
+.copyright_logo {
     background-color: black
 }
 /* Это временно */
