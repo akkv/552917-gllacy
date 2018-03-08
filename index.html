@@ -11,7 +11,24 @@
         <img class="logo" src="img/logo.svg" width="155" height="64" alt="Gllacy">
         <ul class="main-menu">
           <li>
-            <a class="main-link" href="#">Каталог</a>
+            <a class="main-link" href="catalog.html">Каталог</a>
+            <ul class="main-submenu">
+              <li class="main-sub">
+                <a class="main-sub_link" href="#">Новинки</a>
+              </li>
+              <li class="main-sub">
+                <a class="main-sub_link" href="#">Сливочное</a>
+              </li>
+              <li class="main-sub">
+                <a class="main-sub_link" href="#">Щереты</a>
+              </li>
+              <li class="main-sub">
+                <a class="main-sub_link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="main-sub">
+                <a class="main-sub_link" href="#">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a class="main-link" href="#">Доставка и оплата</a>
@@ -39,21 +56,23 @@
     <main class="page-container">
       <h1 class="visually-hiden">Магазин мороженого Gllacy</h1>
       <section class="slider">
-        <div class="slide" id="slide1">
-          <img src="img/slide1.png" alt="Крем-брюле и пломбир с малиновым джемом">
-          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-          <a class="slide_btn" href="#">Давайте оба!</a>
-        </div>
-        <div class="slide" id="slide2">
-          <img src="img/slide2.png" alt="Шоколадный пломбир и лимонный сорбет">
-          <h2>Шоколадный пломбир и лимонный сорбет</h2>
-          <a class="slide_btn" href="#">Давайте оба!</a>
-        </div>
-        <div class="slide" id="slide3">
-          <img src="img/slide3.png" alt="Пломбир с помадкой и клубничный щербет">
-          <h2>Пломбир с помадкой и клубничный щербет</h2>
-          <a class="slide_btn" href="#">Давайте оба!</a>
-        </div>
+        <ul>
+          <li class="slide" id="slide1">
+            <img src="img/slide-krem-brule-malina.png" alt="Крем-брюле и пломбир с малиновым джемом">
+            <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+            <a class="slide_btn" href="#">Давайте оба!</a>
+          </li>
+          <li class="slide" id="slide2">
+            <img src="img/slide-shokolad-limon.png" alt="Шоколадный пломбир и лимонный сорбет">
+            <h2>Шоколадный пломбир и лимонный сорбет</h2>
+            <a class="slide_btn" href="#">Давайте оба!</a>
+          </li>
+          <li class="slide" id="slide3">
+            <img src="img/slide-pomadka-klubnika.png" alt="Пломбир с помадкой и клубничный щербет">
+            <h2>Пломбир с помадкой и клубничный щербет</h2>
+            <a class="slide_btn" href="#">Давайте оба!</a>
+          </li>
+        </ul>
       </section>
       <h2 class="visually-hiden">Наши акции</h2>
       <article class="promo_left">
@@ -71,30 +90,26 @@
         <ul class="product">
           <li class="ice hit">
             <a class="ice_link" href="#">
-              <img src="img/ice1.jpg" alt="фото товара">
-              <span class="ice_price">310&#8381;</span>
-              <span class="ice_price2">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой
+              <img src="img/slivochnoe-apelsin.jpg" alt="фото товара">
+              <p class="ice_price">310&#8381;<span class="ice_weight">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
           </li>
           <li class="ice hit">
             <a class="ice_link" href="#">
-              <img src="img/ice2.jpg" alt="фото товара">
-              <span class="ice_price">380&#8381;</span>
-              <span class="ice_price2">/кг</span>Сливочно-кофейное с кусочками шоколада
+              <img src="img/slivochnoe-kofe.jpg" alt="фото товара">
+              <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочно-кофейное с кусочками шоколада</p>
             </a>
           </li>
           <li class="ice hit">
             <a class="ice_link" href="#">
-              <img src="img/ice3.jpg" alt="фото товара">
-              <span class="ice_price">355&#8381;</span>
-              <span class="ice_price2">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада
+              <img src="img/slivochnoe-klubnika.jpg" alt="фото товара">
+              <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
           </li>
           <li class="ice hit">
             <a class="ice_link" href="#">
-              <img src="img/ice4.jpg" alt="фото товара">
-              <span class="ice_price">415&#8381;</span>
-              <span class="ice_price2">/кг</span>Сливочное крем-брюле с карамельной подливкой
+              <img src="img/slivochnoe-krembrul.jpg" alt="фото товара">
+              <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочное крем-брюле с карамельной подливкой</p>
             </a>
           </li>
         </ul>
@@ -116,7 +131,7 @@
       <article class="blog">
         <h2>Новое в нашем блоге</h2>
         <a class="blog_link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-        <img src="img/blog.jpg" alt="Фруктовый щербет украшенный фруктами">
+        <img src="img/blog-klubnika.jpg" alt="Фруктовый щербет украшенный фруктами">
       </article>
       <section class="subscribe">
         <h2 class="visually-hiden">Подписка на рассылку</h2>
@@ -138,12 +153,12 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="footer-socials">
-        <a class="social tw" href="#">Twitter</a>
-        <a class="social inst" href="#">Instagram</a>
-        <a class="social fb" href="#">Facebook</a>
-        <a class="social vk" href="#">Vkontakte</a>
-      </div>
+      <ul class="footer-socials">
+        <li class="social tw" href="#">Twitter</li>
+        <li class="social inst" href="#">Instagram</li>
+        <li class="social fb" href="#">Facebook</li>
+        <li class="social vk" href="#">Vkontakte</li>
+      </ul>
       <ul class="footer-information">
         <li>
           <a class="footer-inf" href="#">Для поставщиков</a>
