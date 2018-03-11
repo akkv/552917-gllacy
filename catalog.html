@@ -41,10 +41,30 @@
         </ul>
         <ul class="main-user">
           <li>
-            <a class="user-btn search-btn" href="#">Поиск</a>
+            <a class="user-btn search-btn" href="#"></a>
+            <form class="search" method="post">
+              <fieldset class="search-form">
+                <label for="search">Что ищем?</label>
+                <input class="search_input" type="search" name="search"  id="search" placeholder="Что ищем?">
+              </fieldset>
+              <input class="user-btn search-form_btn" type="submit" value="Искать!">
+            </form>
           </li>
           <li>
             <a class="user-btn login-btn" href="#">Вход</a>
+            <form class="login" method="post">
+              <fieldset class="login-form">
+                <label for="email">Электронная почта</label>
+                <input class="login_email" type="email" name="email" id="email" placeholder="Электронная почта">
+                <label for="password">Пароль</label>
+                <input class="login_link" type="password" name="password" id="password" placeholder="Пароль">
+                <input class="btn login-form_btn" type="submit" value="Войти">
+              </fieldset>
+              <p class="login-links">
+                <a class="login-link" href="#">Забыли пароль?</a>
+                <a class="login-link" href="#">Новая регистрация</a>
+              </p>
+            </form>
           </li>
           <li>
             <a class="user-btn basket-btn--active" href="#">2 товара</a>
@@ -86,72 +106,84 @@
               <img src="img/slivochnoe-apelsin.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <p class="ice_price">310&#8381;<span class="ice_weight">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-kofe.jpg" alt="Сливочно-кофейное с кусочками шоколада">
               <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочно-кофейное с кусочками шоколада</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-klubnika.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-krembrul.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
               <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочное крем-брюле с карамельной подливкой</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-brusnika.jpg" alt="Сливочное с брусничным джемом">
               <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с брусничным джемом</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-chernika.jpg" alt="Сливочно-черничное с цельными ягодами черники">
               <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-черничное с цельными ягодами черники</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-limon.jpg" alt="Сливочно-лимонное с карамельной присыпкой">
               <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочно-лимонное с карамельной присыпкой</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-shokolad.jpg" alt="Сливочное с шоколадной стружкой">
               <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с шоколадной стружкой</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-vanil.jpg" alt="Сливочно-ванильное с кусочками шоколада">
               <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-ванильное с кусочками шоколада</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-mentol.jpg" alt="Сливочноe с ментоловым сиропом">
               <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочноe с ментоловым сиропом</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-chern_shokolad.jpg" alt="Сливочное с кусочками черного шоколада">
               <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с кусочками черного шоколада</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-myata.jpg" alt="Сливочное с мятным сиропом">
               <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочное с мятным сиропом</p>
             </a>
+            <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
