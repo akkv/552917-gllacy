@@ -68,6 +68,24 @@
           </li>
           <li>
             <a class="user-btn basket-btn--active" href="#">2 товара</a>
+            <table class="order-form">
+              <tr>
+                <td><button class="order_del" type="button"></button></td>
+                <td></td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5 кг х <span class="weight_grey">200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button class="order_del" type="button"></button></td>
+                <td></td>
+                <td>Клубничный пломбир с присыпкой  из белого шоколада</td>
+                <td>1,5 кг х <span class="weight_grey">300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+            </table>
+            <b>Итого: 750 руб.</b>
+            <button class="btn order_btn" type="button" name="order">Оформить заказ</button>
           </li>
         </ul>
       </nav>
@@ -86,17 +104,43 @@
         <li>Сливочное</li>
       </ul>
       <h1>Сливочное мороженое</h1>
-      <section class="filter">
+      <section class="filter-form">
         <h2 class="visually-hiden">Форма поиска:</h2>
-        <ul class="filter_items">
-          <li class="filter_item">Сортировка</li>
-          <li class="filter_item">Цена 100 руб. - 500 руб.</li>
-          <li class="filter_item">Жирность:</li>
-          <li class="filter_item">Наполнители:</li>
-          <li class="filter_item">
-            <input type="submit" name="search-form_btn" value="Применить">
-          </li>
-        </ul>
+        <form class="filter" method="post">
+          <fieldset class="filter-sort">
+            <legend>Сортировка</legend>
+            <label>
+              <select name="sort" id="sort">
+                <option value="popular">по популярности</option>
+                <option value="price-min">сначала недорогие</option>
+                <option value="price-max">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset class="filter-price">
+            <legend>Цена : 100 руб. - 500 руб.</legend>
+            <label>
+              <input type="range" name="price" id="price" min="100" max="500" step="1">
+            </label>
+          </fieldset>
+          <fieldset class="filter-fat"> 
+            <legend>Жирность:</legend>
+            <label><input type="radio" name="fat" value="0">0%</label>
+            <label><input type="radio" name="fat" value="<10" checked>до 10%</label>
+            <label><input type="radio" name="fat" value="<30">до 30%</label>
+            <label><input type="radio" name="fat" value=">30">выше 30%</label>
+          </fieldset>
+          <fieldset class="filter-fillers">
+            <legend>Напонители:</legend>
+            <label><input type="checkbox" name="filler" value="choc" checked>шоколадные</label>
+            <label><input type="checkbox" name="filler" value="shugar" checked>сахарные присыпки</label>
+            <label><input type="checkbox" name="filler" value="fruits">фрукты</label>
+            <label><input type="checkbox" name="filler" value="syrup">сиропы</label>
+            <label><input type="checkbox" name="filler" value="jam">джемы</label>
+          </fieldset>
+          <input class="filter_btn" type="submit" value="Применить">
+        </form>
       </section>
       <section class="products">
         <h2 class="visually-hiden">Результаты поиска:</h2>
@@ -213,10 +257,10 @@
     </main>
     <footer class="main-footer">
       <ul class="footer-socials">
-        <li class="social tw" href="#">Twitter</li>
-        <li class="social inst" href="#">Instagram</li>
-        <li class="social fb" href="#">Facebook</li>
-        <li class="social vk" href="#">Vkontakte</li>
+        <li><a class="social tw" href="#">Twitter</a></li>
+        <li><a class="social inst" href="#">Instagram</a></li>
+        <li><a class="social fb" href="#">Facebook</a></li>
+        <li><a class="social vk" href="#">Vkontakte</a></li>
       </ul>
       <ul class="footer-information">
         <li>
