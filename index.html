@@ -40,7 +40,7 @@
         <ul class="main-user">
           <li>
             <a class="user-btn search-btn" href="#"></a>
-            <form class="search" method="post">
+            <form class="search" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="search-form">
                 <label class="visually-hiden" for="search">Что ищем?</label>
                 <input class="search_input" type="search" name="search"  id="search" placeholder="Что ищем?">
@@ -50,7 +50,7 @@
           </li>
           <li>
             <a class="user-btn login-btn" href="#">Вход</a>
-            <form class="login" method="post">
+            <form class="login" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="login-form">
                 <label class="visually-hiden" for="email">Электронная почта</label>
                 <input class="login_email" type="email" name="email" id="email" placeholder="Электронная почта">
@@ -161,7 +161,7 @@
         <h2 class="visually-hiden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
           спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form class="subscribe-form" method="post">
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <input class="subscribe_email" type="email" placeholder="Электронная почта">
           <button class="btn subscribe_btn">Отправить</button>
         </form>
@@ -178,14 +178,14 @@
         <button class="btn feedback_btn" type="button">Форма обратной связи</button>
         <div class="feedback-popup">
           <button class="feedback-popup_close" type="button" title="Закрыть"></button>
-          <form class="feedback" method="post">
+          <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="feedback-form">
               <p class="feedback_title">Мы обязательно вам ответим!</p>
               <label class="visually-hiden" for="feedback_name">Как вас зовут?</label>
               <input class="feedback_name" type="text" name="feedback_name" id="feedback_name" placeholder="Как вас зовут?">
               <label class="visually-hiden" for="feedback_email">Ваша пота для ответа?</label>
               <input class="feedback_email" type="email" name="feedback_email" id="feedback_email" placeholder="Ваша почта для ответа?">
-              <textarea class="feedback_text" placeholder="Напишите что-нибудь..."></textarea>
+              <textarea class="feedback_text" name="feedback_text" placeholder="Напишите что-нибудь..."></textarea>
               <button class="btn feedback-form_btn">Отправить</button>
             </fieldset>
           </form>
