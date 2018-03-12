@@ -44,21 +44,21 @@
             <a class="user-btn search-btn" href="#"></a>
             <form class="search" method="post">
               <fieldset class="search-form">
-                <label for="search">Что ищем?</label>
+                <label class="visually-hiden" for="search">Что ищем?</label>
                 <input class="search_input" type="search" name="search"  id="search" placeholder="Что ищем?">
               </fieldset>
-              <input class="user-btn search-form_btn" type="submit" value="Искать!">
+              <button class="user-btn search-form_btn">Искать!</button>
             </form>
           </li>
           <li>
             <a class="user-btn login-btn" href="#">Вход</a>
             <form class="login" method="post">
               <fieldset class="login-form">
-                <label for="email">Электронная почта</label>
+                <label class="visually-hiden" for="email">Электронная почта</label>
                 <input class="login_email" type="email" name="email" id="email" placeholder="Электронная почта">
                 <label for="password">Пароль</label>
                 <input class="login_link" type="password" name="password" id="password" placeholder="Пароль">
-                <input class="btn login-form_btn" type="submit" value="Войти">
+                <button class="btn login-form_btn">Войти</button>
               </fieldset>
               <p class="login-links">
                 <a class="login-link" href="#">Забыли пароль?</a>
@@ -109,20 +109,16 @@
         <form class="filter" method="post">
           <fieldset class="filter-sort">
             <legend>Сортировка</legend>
-            <label>
               <select name="sort" id="sort">
                 <option value="popular">по популярности</option>
                 <option value="price-min">сначала недорогие</option>
                 <option value="price-max">сначала дорогие</option>
                 <option value="fat">по жирности</option>
               </select>
-            </label>
-          </fieldset>
+            </fieldset>
           <fieldset class="filter-price">
             <legend>Цена : 100 руб. - 500 руб.</legend>
-            <label>
-              <input type="range" name="price" id="price" min="100" max="500" step="1">
-            </label>
+            <input type="range" name="price" id="price" min="100" max="500" step="1">
           </fieldset>
           <fieldset class="filter-fat"> 
             <legend>Жирность:</legend>
@@ -132,14 +128,14 @@
             <label><input type="radio" name="fat" value=">30">выше 30%</label>
           </fieldset>
           <fieldset class="filter-fillers">
-            <legend>Напонители:</legend>
+            <legend>Наполнители:</legend>
             <label><input type="checkbox" name="filler" value="choc" checked>шоколадные</label>
             <label><input type="checkbox" name="filler" value="shugar" checked>сахарные присыпки</label>
             <label><input type="checkbox" name="filler" value="fruits">фрукты</label>
             <label><input type="checkbox" name="filler" value="syrup">сиропы</label>
             <label><input type="checkbox" name="filler" value="jam">джемы</label>
           </fieldset>
-          <input class="filter_btn" type="submit" value="Применить">
+          <button class="filter_btn">Применить</button>
         </form>
       </section>
       <section class="products">
@@ -148,84 +144,84 @@
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-apelsin.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <p class="ice_price">310&#8381;<span class="ice_weight">/кг</span>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+              <p class="ice_price">310&#8381;<span class="ice_weight">/кг </span>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-kofe.jpg" alt="Сливочно-кофейное с кусочками шоколада">
-              <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочно-кофейное с кусочками шоколада</p>
+              <p class="ice_price">380&#8381;<span class="ice_weight">/кг </span>Сливочно-кофейное с кусочками шоколада</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-klubnika.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-клубничное с присыпкой из белого шоколада</p>
+              <p class="ice_price">355&#8381;<span class="ice_weight">/кг </span>Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-krembrul.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
-              <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочное крем-брюле с карамельной подливкой</p>
+              <p class="ice_price">415&#8381;<span class="ice_weight">/кг </span>Сливочное крем-брюле с карамельной подливкой</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-brusnika.jpg" alt="Сливочное с брусничным джемом">
-              <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с брусничным джемом</p>
+              <p class="ice_price">380&#8381;<span class="ice_weight">/кг </span>Сливочное с брусничным джемом</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-chernika.jpg" alt="Сливочно-черничное с цельными ягодами черники">
-              <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-черничное с цельными ягодами черники</p>
+              <p class="ice_price">355&#8381;<span class="ice_weight">/кг </span>Сливочно-черничное с цельными ягодами черники</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-limon.jpg" alt="Сливочно-лимонное с карамельной присыпкой">
-              <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочно-лимонное с карамельной присыпкой</p>
+              <p class="ice_price">415&#8381;<span class="ice_weight">/кг </span>Сливочно-лимонное с карамельной присыпкой</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-shokolad.jpg" alt="Сливочное с шоколадной стружкой">
-              <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с шоколадной стружкой</p>
+              <p class="ice_price">380&#8381;<span class="ice_weight">/кг </span>Сливочное с шоколадной стружкой</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-vanil.jpg" alt="Сливочно-ванильное с кусочками шоколада">
-              <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочно-ванильное с кусочками шоколада</p>
+              <p class="ice_price">355&#8381;<span class="ice_weight">/кг </span>Сливочно-ванильное с кусочками шоколада</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-mentol.jpg" alt="Сливочноe с ментоловым сиропом">
-              <p class="ice_price">415&#8381;<span class="ice_weight">/кг</span>Сливочноe с ментоловым сиропом</p>
+              <p class="ice_price">415&#8381;<span class="ice_weight">/кг </span>Сливочноe с ментоловым сиропом</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-chern_shokolad.jpg" alt="Сливочное с кусочками черного шоколада">
-              <p class="ice_price">380&#8381;<span class="ice_weight">/кг</span>Сливочное с кусочками черного шоколада</p>
+              <p class="ice_price">380&#8381;<span class="ice_weight">/кг </span>Сливочное с кусочками черного шоколада</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice">
             <a class="ice_link" href="#">
               <img src="img/slivochnoe-myata.jpg" alt="Сливочное с мятным сиропом">
-              <p class="ice_price">355&#8381;<span class="ice_weight">/кг</span>Сливочное с мятным сиропом</p>
+              <p class="ice_price">355&#8381;<span class="ice_weight">/кг </span>Сливочное с мятным сиропом</p>
             </a>
             <a class="btn preview_btn" href="#">Быстрый просмотр</a>
           </li>
