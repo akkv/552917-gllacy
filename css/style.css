@@ -92,6 +92,7 @@ a.login-link {
 a.login-link:hover,
 a.login-link:active {
     color: #e84d37;
+    border-bottom: 1px solid rgba(232, 77 , 55, 0.3);
 }
 /* График телефон */
 .header-time {
@@ -226,3 +227,94 @@ a.login-link:active {
 .subscribe {
     background: #f5f3f2;
 }
+.subscribe p {
+    margin: 0;
+}
+/* map */
+/* contacts */
+.contacts p{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+}
+.contacts-adress{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.contacts-phone{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+}
+.contacts-time{
+    line-height: 22px;
+}
+.feedback p{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: medium;
+}
+/* footer */
+.footer-socials,
+.footer-information {
+    list-style: none;
+}
+.footer-socials {
+    font-size: 0;
+}
+.social {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.tw {
+    background: url(/img/twitter.svg);
+}
+.inst {
+    background: url(/img/instagram.svg);
+}
+.fb {
+    background: url(/img/fb.svg)
+}
+.vk {
+    background: url(/img/vk.svg)
+}
+.footer-information a {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+.footer-information li:first-child a {
+    font-weight: bold;
+}
+.footer-inf {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-inf:hover,
+.footer-inf:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+.copyright {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+.copyright_text {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.copyright_text:hover,
+.copyright_text:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+.feedback_title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: medium;
+}
+
