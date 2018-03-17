@@ -5,9 +5,9 @@ body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
     color: #323232;
-
+    
     background-color: #849d8f;
 }
 a {
@@ -23,28 +23,25 @@ a {
 }
 /* Шапка */
 .site-nav,
-.site-nav-sub,
-.user-nav {
+.user-nav,
+.site-nav-sub{
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 /* Site menu */
-.site-nav a,
-.user-nav a {
+.site-nav_link {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
     color: #fff;
-}
-.site-nav a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.site-nav {
-    line-height: 18px;
-    font-weight: bold;
-    color: #fff;
-}
-.site-nav>li>a:hover {
+.site-nav_link:hover {
     color: #333333;
     background-color: #fff;
 }
-.site-nav>li>a:active {
+.site-nav_link:active {
     color: #fff;
     background: #d07058;
 }
@@ -52,14 +49,14 @@ a {
 .site-nav-sub {
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     color: #323232;
-    padding: 0;
-    margin: 0;
     background: #fff;
 }
 .site-nav-sub li:first-child {
     font-weight: 700;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .site-nav-sub a {
     color: #323232;
@@ -71,38 +68,39 @@ a {
     background: #f6b5a5;
 }
 /* User menu */
-.user-nav>li>a{
+.user-btn{
     font-size: 14px;
     line-height: 16px;
-    font-weight: medium;
+    font-weight: 500;
     color: #fff;
     background: rgba(255, 255, 255, 0.2)
 }
-.user-nav>li>a:hover{
+.user-btn:hover,
+.user-btn:active{
     color: #323232;
     background: #fff;
 }
-a.login-link {
+.login-link {
     font-size: 13px;
     line-height: 24px;
-    font-weight: normal;
+    font-weight: 400;
     color: #323232;   
     border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
 }
-a.login-link:hover,
-a.login-link:active {
+.login-link:hover,
+.login-link:active {
     color: #e84d37;
     border-bottom: 1px solid rgba(232, 77 , 55, 0.3);
 }
 /* График телефон */
 .header-time {
-    font-weight: bold;
-    color: #fff;
-    text-align: right; 
-}
-.header-time {
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-align: right; 
 }
 .header-phone {
     font-size: 22px;
@@ -114,6 +112,10 @@ a.login-link:active {
     border: none;
 }
 /* слайдер */
+.slider ul{
+    margin: 0;
+    padding: 0;
+}
 .slide {
     list-style: none;
 }
@@ -124,13 +126,14 @@ a.login-link:active {
     text-align: center;
 } 
 .slide_btn {
-    display: block;
+padding: 11px 41px 13px 41px;
     font-size: 32px;
     line-height: 44px;
-    font-weight: bold;
+    font-weight: 700;
     width: 280px;
     height: 64px;
 }
+/* Красные кнопки */
 .btn {
     text-shadow: 0 2px 5px #a0200b;
     color: #fff;
@@ -155,67 +158,85 @@ a.login-link:active {
     background: no-repeat #492d20 url(/img/promo-shokolad.jpg);
 }
 .promo-left h2,
-.promo-right h2     {
+.promo-right h2{
+    margin: 0;
+    padding: 0;
     font-size: 35px;
     line-height: 41px;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
 }
 .promo-left p,
-.promo-right p     {
+.promo-right p{
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
 }
 /* Продукция */
 .product {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-.product a {
-    color: #fff;
+.ice_price,
+.ice_name {
+    margin: 0;
+    padding: 0;
 }
-.ice {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: medium;
+.ice_link {
+    color: #fff;
 }
 .ice_price {
     font-size: 45px;
     line-height: 45px;
-    font-weight: bold;
+    font-weight: 700;
 }
-.ice_link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.ice_weight {
+    font-size: 30px;
+}
+.ice_name {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
 }
 /* О нас */
 .about_us {
     background: #ede0c8 url(/img/bg-about.jpg);
 }
 .about_us h2 {
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     line-height: 30px;
-    font-weight: medium;
+    font-weight: 500;
+}
+.about {
+    margin: 0;
+    padding: 0;
 }
 .about_text {
     list-style: none;
     font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
 }
 /* блог */
 .blog {
     background: #fff;
 }
 .blog h2 {
+    margin: 0px;
     font-size: 16px;
     line-height: 22px;
-    font-weight: medium;
+    font-weight: 500;
 }
 .blog_link {
     font-size: 24px;
     line-height: 30px;
-    font-weight: bold;
+    font-weight: 700;
     color: #323232;
     text-decoration: underline;
 }
@@ -232,32 +253,36 @@ a.login-link:active {
 }
 /* map */
 /* contacts */
-.contacts p{
+.contacts_content{
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 20px;
-    font-weight: normal;
+    font-weight: 400;
 }
 .contacts-adress{
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .contacts-phone{
     font-size: 18px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .contacts-time{
     line-height: 22px;
 }
-.feedback p{
-    font-size: 24px;
+.feedback_title {
+    font-size: 44px;
     line-height: 28px;
-    font-weight: medium;
+    font-weight: 500;
 }
 /* footer */
 .footer-socials,
 .footer-information {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 .footer-socials {
@@ -280,17 +305,15 @@ a.login-link:active {
 .vk {
     background: url(/img/vk.svg)
 }
-.footer-information a {
+.footer-inf{
     font-size: 13px;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
     color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .footer-information li:first-child a {
-    font-weight: bold;
-}
-.footer-inf {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 700;
 }
 .footer-inf:hover,
 .footer-inf:active {
@@ -300,7 +323,7 @@ a.login-link:active {
 .copyright {
     font-size: 12px;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
     color: #fff;
 }
 .copyright_text {
@@ -311,10 +334,79 @@ a.login-link:active {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
-
-.feedback_title {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: medium;
+/* сетка */
+.main-header {    
+    width: 1200px;
+    margin: 0 auto;
 }
-
+.main-nav {
+    display: flex;
+    justify-content: center;
+}
+.main-logo {
+    width: 155px;
+}
+.site-nav {
+    width: 725px;
+}
+.user-nav {
+    width: 267px;
+}
+.header-time {
+    width: 1146px;
+    margin: 0 auto;
+}
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.promo {
+    padding: 0 13px;
+    display: flex;
+    justify-content: space-around;
+}
+.promo-left,
+.promo-right {
+    width: 560px;
+}
+.products {
+    padding: 0 13px;
+}
+.product {
+    display: flex;
+    justify-content: space-around;
+}
+.ice {
+    width: 267px;
+}
+.about_us {
+    width: 1146px;
+    margin: 0 auto;
+}
+.news {
+    padding: 0 13px;
+    display: flex;
+    justify-content: space-around;
+}
+.blog,
+.subscribe-wrapper {
+    width: 560px;
+}
+.map {
+    width: auto;
+}
+.main-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-socials {
+    width: 267px;
+}
+.footer-information {
+    width: 560px;
+}
+.copyright {
+    width: 267px;
+}
