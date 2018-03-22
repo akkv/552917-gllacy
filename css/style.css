@@ -7,19 +7,50 @@ body {
     line-height: 22px;
     font-weight: 400;
     color: #323232;
-    
-    background-color: #849d8f;
 }
 a {
     text-decoration: none;
 }
+.img {
+    max-width: 100%;
+    height: auto;
+}
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.site-wrapper {
+    min-width: 1200px;
+    background-color: #849d8f;
+    background-image: url("../img/slide-krem-brule-malina.png");
+    background-repeat: no-repeat;
+    background-position: 50% 4%;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
+}
+.site-wrapper::before {
+  background-image: url("../img/slide-shokolad-limon.png");
+}
+.site-wrapper::after {
+  background-image: url("../img/slide-pomadka-klubnika.png");
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 /* Шапка */
 .site-nav,
@@ -30,20 +61,48 @@ a {
     list-style: none;
 }
 /* Site menu */
+.main-logo {
+    margin-right: 10px;
+}
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.site-nav_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .site-nav_link {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .site-nav_link:hover {
     color: #333333;
     background-color: #fff;
+    border-radius: 30px;
+    padding: 5px 15px;
 }
 .site-nav_link:active {
+    box-shadow: inset 0 2px 1px #696969;
+}
+.site-nav_link--active {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
     color: #fff;
-    background: #d07058;
+
+    padding: 5px 12px;
+    border-radius: 30px;
+
+    background-color: #d07058;
 }
 /* выпадающая менюшка */
 .site-nav-sub {
@@ -68,17 +127,54 @@ a {
     background: #f6b5a5;
 }
 /* User menu */
-.user-btn{
+.user-nav_link{
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     color: #fff;
-    background: rgba(255, 255, 255, 0.2)
+    background: rgba(255, 255, 255, 0.2);
+    
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
 }
-.user-btn:hover,
-.user-btn:active{
+svg {
+    margin-right: 5px;
+}
+.user-nav_link:hover g {
+    fill: #000;
+}
+.user-nav_link:hover,
+.user-nav_link:active{
     color: #323232;
     background: #fff;
+}
+.login-btn {
+    padding-left: 15px;
+    padding-right: 20px;
+}
+.basket-btn {
+    padding-left: 15px;
+    padding-right: 32px;
+}
+.basket-btn--active {
+    color: #323232;
+    background: #f7f6f3;
+    padding-right: 15px;
+}
+.user-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-nav_item {
+    display: block;
+    padding: 20px 0;
+    margin-left: 10px;
+}
+.user-nav_item:first-child {
+    margin-left: 5px;
 }
 .login-link {
     font-size: 13px;
@@ -112,6 +208,15 @@ a {
     border: none;
 }
 /* слайдер */
+.slide {
+    display: none;
+}
+.slider {
+    position: relative;
+    padding-top: 280px;
+    text-align: center;
+    margin-bottom: 50px; 
+}
 .slider ul{
     margin: 0;
     padding: 0;
@@ -119,19 +224,57 @@ a {
 .slide {
     list-style: none;
 }
-.slide h2 {
+.slider-title {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 27px;
     font-size: 60px;
     line-height: 60px;
     color: #fff;
     text-align: center;
 } 
 .slide_btn {
-padding: 11px 41px 13px 41px;
+padding: 12px 40px;
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
-    width: 280px;
-    height: 64px;
+}
+.slider-control {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 20;
+    font-size: 0;
+}
+.slider-control label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+#prod1:checked ~ .site-wrapper #slide1,
+#prod2:checked ~ .site-wrapper #slide2,
+#prod3:checked ~ .site-wrapper #slide3 {
+    display: block;
+}
+#prod1:checked ~ .site-wrapper label[for="prod1"],
+#prod2:checked ~ .site-wrapper label[for="prod2"],
+#prod3:checked ~ .site-wrapper label[for="prod3"] {
+    background-color: #ffffff;
+}
+#prod1:checked ~ .site-wrapper {
+    background-color: #849d8f;
+    background-image: url("../img/slide-krem-brule-malina.png");
+}  
+#prod2:checked ~ .site-wrapper {
+    background-color: #8996a6;
+    background-image: url("../img/slide-shokolad-limon.png");
+}
+#prod3:checked ~ .site-wrapper {
+    background-color: #9d8b84;
+    background-image: url("../img/slide-pomadka-klubnika.png");
 }
 /* Красные кнопки */
 .btn {
@@ -152,10 +295,10 @@ padding: 11px 41px 13px 41px;
 }
 /* Акции */
 .promo-left {
-    background: no-repeat #7d132a url(/img/promo-klubnika.jpg);
+    background: no-repeat #7d132a url(../img/promo-klubnika.jpg);
 }
 .promo-right {
-    background: no-repeat #492d20 url(/img/promo-shokolad.jpg);
+    background: no-repeat #492d20 url(../img/promo-shokolad.jpg);
 }
 .promo-left h2,
 .promo-right h2{
@@ -189,6 +332,9 @@ padding: 11px 41px 13px 41px;
 .ice_link {
     color: #fff;
 }
+.ice_link img {
+    border-radius: 50%;
+}
 .ice_price {
     font-size: 45px;
     line-height: 45px;
@@ -204,7 +350,7 @@ padding: 11px 41px 13px 41px;
 }
 /* О нас */
 .about_us {
-    background: #ede0c8 url(/img/bg-about.jpg);
+    background: #ede0c8 url(../img/bg-about.jpg);
 }
 .about_us h2 {
     margin: 0;
@@ -242,7 +388,7 @@ padding: 11px 41px 13px 41px;
 }
 /* Подписка */
 .subscribe-wrapper {
-    background: url(/img/bg-post.svg);
+    background: url(../img/bg-post.svg);
     padding: 5px;
 }
 .subscribe {
@@ -280,7 +426,7 @@ padding: 11px 41px 13px 41px;
 }
 /* footer */
 .footer-socials,
-.footer-information {
+.footer-inf {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -292,31 +438,45 @@ padding: 11px 41px 13px 41px;
     display: block;
     width: 32px;
     height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.social:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.social:active {
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 .tw {
-    background: url(/img/twitter.svg);
+    background: no-repeat url(../img/twitter.svg);
 }
 .inst {
-    background: url(/img/instagram.svg);
+    background: no-repeat url(../img/instagram.svg);
 }
 .fb {
-    background: url(/img/fb.svg)
+    background: no-repeat url(../img/fb.svg)
 }
 .vk {
-    background: url(/img/vk.svg)
+    background: no-repeat url(../img/vk.svg)
 }
-.footer-inf{
+.tw,
+.inst,
+.fb,
+.vk {
+    background-position: 50% 50%;
+}
+.footer-inf_link{
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.footer-information li:first-child a {
+.footer-inf_item:first-child a {
     font-weight: 700;
 }
-.footer-inf:hover,
-.footer-inf:active {
+.footer-inf_link:hover,
+.footer-inf_link:active {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
@@ -334,14 +494,83 @@ padding: 11px 41px 13px 41px;
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
+/* каталог */
+.page-title {
+    color: #fff;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+}
+/* крошки */
+.breadcrumbs {
+    list-style: none;
+}
+.breadcrumb_link {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.breadcrumb_link:hover,
+.breadcrumb_link:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+.breadcrumb_link--active {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+/* пагинатор */
+.paginator {
+    list-style: none;
+}
+.paginator_link--inactive,
+.paginator_link--active,
+.paginator_link {
+    padding: 2px 8px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.paginator_link--left,
+.paginator_link--right {
+    color: rgba(255, 255, 255, 0.0)
+}
+.paginator_link--left {
+    background: no-repeat url(../img/paginator-left.png);
+}
+.paginator_link--right {
+    background: no-repeat url(../img/paginator-right.png);
+}
+.paginator_link--active {
+    color: #323232;
+    background: #fff;
+    border-radius: 50%;
+}
+.paginator_link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+.paginator_link:active {
+    color: #323232;
+    background: #fff;
+    border-radius: 50%;
+}
 /* сетка */
-.main-header {    
-    width: 1200px;
-    margin: 0 auto;
+.main-header {
+    padding-top: 10px;
+    
 }
 .main-nav {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 .main-logo {
     width: 155px;
@@ -354,10 +583,6 @@ padding: 11px 41px 13px 41px;
 }
 .header-time {
     width: 1146px;
-    margin: 0 auto;
-}
-.page-container {
-    width: 1200px;
     margin: 0 auto;
 }
 .promo {
@@ -374,6 +599,7 @@ padding: 11px 41px 13px 41px;
 }
 .product {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .ice {
@@ -396,8 +622,6 @@ padding: 11px 41px 13px 41px;
     width: auto;
 }
 .main-footer {
-    width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
 }
@@ -410,3 +634,5 @@ padding: 11px 41px 13px 41px;
 .copyright {
     width: 267px;
 }
+/* Формы */
+/* микрофлексы */
