@@ -95,12 +95,12 @@
             </p>
           </div>
         </header>
-        <main class="page-container">
+        <main>
           <h1 class="page-title">Сливочное мороженое</h1>
           <section class="filter-form">
             <h2 class="visually-hidden">Форма поиска:</h2>
-            <form class="filter" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="filter-sort">
+            <form class="filters" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="filter filter-sort">
                 <legend>Сортировка</legend>
                   <select name="sort" id="sort">
                     <option value="popular">по популярности</option>
@@ -109,18 +109,20 @@
                     <option value="fat">по жирности</option>
                   </select>
                 </fieldset>
-              <fieldset class="filter-price">
+              <fieldset class="filter filter-price">
                 <legend>Цена : 100 руб. - 500 руб.</legend>
-                <input type="range" name="price" id="price" min="100" max="500" step="1">
+                <div class="range-wrapper">
+                  <input type="range" name="price" id="price" min="100" max="500" step="1">
+                </div>
               </fieldset>
-              <fieldset class="filter-fat"> 
+              <fieldset class="filter filter-fat"> 
                 <legend>Жирность:</legend>
                 <label><input type="radio" name="fat" value="0">0%</label>
                 <label><input type="radio" name="fat" value="<10" checked>до 10%</label>
                 <label><input type="radio" name="fat" value="<30">до 30%</label>
                 <label><input type="radio" name="fat" value=">30">выше 30%</label>
               </fieldset>
-              <fieldset class="filter-fillers">
+              <fieldset class="filter filter-fillers">
                 <legend>Наполнители:</legend>
                 <label><input type="checkbox" name="filler" value="choc" checked>шоколадные</label>
                 <label><input type="checkbox" name="filler" value="shugar" checked>сахарные присыпки</label>

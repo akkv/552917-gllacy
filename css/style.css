@@ -61,7 +61,6 @@ a {
 }
 .main-nav {
     display: flex;
-    justify-content: flex-start;
 }
 .site-nav,
 .user-nav,
@@ -88,6 +87,7 @@ a {
     font-weight: 700;
     color: #fff;
     padding: 7px 15px;
+    background: linear-gradient(to top, rgba(63, 81, 181, 0.3) 1px, transparent 1px);
 }
 .site-nav_link:hover {
     color: #333333;
@@ -107,15 +107,6 @@ a {
     border-radius: 30px;
     background-color: #d07058;
 }
-.site-nav_link::after {
-    content: "";
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    bottom: 0;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-}
 /* выпадающая менюшка */
 .site-nav-sub {
     display: none;
@@ -132,8 +123,8 @@ a {
     border-radius: 5px;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
 }
-
-.site-nav_item:hover > .site-nav-sub {
+.site-nav_link:hover + .site-nav-sub,
+.site-nav-sub {
     display: block;
 }
 .site-nav-sub a {
@@ -227,7 +218,7 @@ a {
     line-height: 24px;
     font-weight: 400;
     color: #323232;   
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+    border-bottom: 5px solid rgba(0, 0, 0, 0.3); 
 }
 .login-link:hover,
 .login-link:active {
@@ -268,6 +259,7 @@ a {
     content: "»";
     position: absolute;
     right: 4px;
+    bottom: 2px;
 }
 .breadcrumb_link {
     font-size: 14px;
@@ -291,6 +283,68 @@ a {
 .login fieldset,
 .feedback fieldset {
     border: none;
+}
+.page-title {
+    margin: 0;
+    color: #fff;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin-left: 2.2%;
+}
+.filters {
+    margin: 0 2.3%;
+    display: block;
+    margin-bottom: 25px;
+}
+.filters fieldset {
+    margin: 0;
+    padding: 5px 17px 17px 0;
+    border: none;
+}
+.filters,
+.filter,
+.filter_btn {
+    display: inline-block;
+}
+.filters legend {
+    padding-left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+}
+.filter_btn {
+    margin-top: 21px;
+    padding: 7px 26px;
+    font-weight: 500;
+    line-height: 18px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+.filter select {
+    height: 36px;
+    padding: 0 35px 0 15px;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+    background: rgba(255,255,255,.2);
+    border: none;
+    border-radius: 18px;
+}
+.range-wrapper {
+    height: 36px;
+    padding: 0 15px;
+    line-height: 36px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.2);
+}
+input[type=range] {
+    width: 178px;
+    padding-right: 0;
+    padding-left: 0;
+    vertical-align: middle;
 }
 /* слайдер */
 .slide {
@@ -808,12 +862,7 @@ padding: 12px 40px;
     border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 /* каталог */
-.page-title {
-    color: #fff;
-    font-size: 35px;
-    line-height: 41px;
-    font-weight: 700;
-}
+
 
 /* пагинатор */
 .paginator {
