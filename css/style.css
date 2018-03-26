@@ -159,7 +159,6 @@ a {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 12px;
-    flex-grow: 
 }
 .user-nav_item {
     display: block;
@@ -322,6 +321,8 @@ a {
     line-height: 18px;
     border: 2px solid #fff;
     border-radius: 20px;
+    color: #fff;
+    background: rgba(255,255,255,.2);
 }
 .filter select {
     height: 36px;
@@ -333,7 +334,7 @@ a {
     border: none;
     border-radius: 18px;
 }
-.range-wrapper {
+.filter-wrapper {
     height: 36px;
     padding: 0 15px;
     line-height: 36px;
@@ -345,6 +346,52 @@ input[type=range] {
     padding-right: 0;
     padding-left: 0;
     vertical-align: middle;
+}
+.filters .filter-fat {
+    font-size: 16px;
+    color: #fff;
+}
+.filter-fat label {
+    margin-right: 17px;
+}
+input[type=radio]+label::before {
+    content: "";
+    display: inline-block;
+    margin-right: 11px;
+    vertical-align: middle;
+    width: 25px;    
+    height: 25px;
+    background-image: url(../img/radio-off.svg);
+    background-position: 0 0;
+}
+.filter-fat label:last-child {
+    margin-right: 0px;
+}
+input[type=radio]:checked+label::before {
+    background-image: url(../img/radio-on.svg);
+}
+.filter-fillers label {
+    font-size: 16px;
+    color: #fff;
+    margin-right: 21px;;
+}
+input[type=checkbox]+label::before {
+    content: "";
+    display: inline-block;
+    margin-right: 11px;
+    vertical-align: middle;
+    width: 23px;    
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    background-position: 50% 50%;
+}
+input[type=checkbox]:checked+label::before {
+    margin-right: 7px;
+    width: 27px; 
+    background-image: url(../img/checkbox-on.svg);
+}
+.filter_btn {
+
 }
 /* слайдер */
 .slide {

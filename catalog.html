@@ -111,24 +111,28 @@
                 </fieldset>
               <fieldset class="filter filter-price">
                 <legend>Цена : 100 руб. - 500 руб.</legend>
-                <div class="range-wrapper">
+                <div class="filter-wrapper">
                   <input type="range" name="price" id="price" min="100" max="500" step="1">
                 </div>
               </fieldset>
               <fieldset class="filter filter-fat"> 
                 <legend>Жирность:</legend>
-                <label><input type="radio" name="fat" value="0">0%</label>
-                <label><input type="radio" name="fat" value="<10" checked>до 10%</label>
-                <label><input type="radio" name="fat" value="<30">до 30%</label>
-                <label><input type="radio" name="fat" value=">30">выше 30%</label>
+                <div class="filter-wrapper">
+                  <input class="visually-hidden" type="radio" name="fat" id="0" value="0"><label for="0">0%</label>
+                  <input class="visually-hidden" type="radio" name="fat" id="10" value="<10" checked><label for="10">до 10%</label>
+                  <input class="visually-hidden" type="radio" name="fat" id="30" value="<30"><label for="30">до 30%</label>
+                  <input class="visually-hidden" type="radio" name="fat" id="more" value=">30"><label for="more">выше 30%</label>
+                </div>
               </fieldset>
               <fieldset class="filter filter-fillers">
                 <legend>Наполнители:</legend>
-                <label><input type="checkbox" name="filler" value="choc" checked>шоколадные</label>
-                <label><input type="checkbox" name="filler" value="shugar" checked>сахарные присыпки</label>
-                <label><input type="checkbox" name="filler" value="fruits">фрукты</label>
-                <label><input type="checkbox" name="filler" value="syrup">сиропы</label>
-                <label><input type="checkbox" name="filler" value="jam">джемы</label>
+                <div class="filter-wrapper">
+                  <input class="visually-hidden" type="checkbox" name="filler" id="choc" value="choc" checked><label for="choc">шоколадные</label>
+                  <input class="visually-hidden" type="checkbox" name="filler" id="shugar" value="shugar" checked><label for="shugar">сахарные присыпки</label>
+                  <input class="visually-hidden" type="checkbox" name="filler" id="fruits" value="fruits"><label for="fruits">фрукты</label>
+                  <input class="visually-hidden" type="checkbox" name="filler" id="syrup" value="syrup"><label for="syrup">сиропы</label>
+                  <input class="visually-hidden" type="checkbox" name="filler" id="jam" value="jam"><label for="jam">джемы</label>
+                </div>
               </fieldset>
               <button class="filter_btn">Применить</button>
             </form>
