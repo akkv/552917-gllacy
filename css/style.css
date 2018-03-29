@@ -28,38 +28,156 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.site-wrapper {
+.page-wrapper {
     background-color: #849d8f;
-    background-image: url("../img/slide-krem-brule-malina.png");
-    background-repeat: no-repeat;
-    background-position: 50% 4%;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
+    min-width: 1200px;
 }
-.site-wrapper::before,
-.site-wrapper::after {
-  content: "";
-  visibility: hidden;
-}
-.site-wrapper::before {
-  background-image: url("../img/slide-shokolad-limon.png");
-}
-.site-wrapper::after {
-  background-image: url("../img/slide-pomadka-klubnika.png");
-}
-.container {
-    min-width: 900px;
+.wrapper {
+    min-width: 1200px;
     max-width: 1200px;
     margin: 0 auto;
 
 }
-/* Шапка */
+.main-logo {
+    flex-grow: 0;
+}
 .main-header {
     padding: 0;
     margin: 0;
-    padding-top: 15px;
+    padding-top: 10px;
     margin: 0 2.3%;
 }
-.main-nav {
+.main-nav{
+    display: flex;
+    align-content: stretch;
+}
+.site-nav,
+.site-nav-sub,
+.user-nav {
+    padding: 0;
+    list-style: none;
+}
+/* меню */
+.site-nav {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 12px;
+    margin-left: 9px;
+}
+.site-nav li {
+    position: relative;
+
+}
+.site-nav a {
+    display: block;
+    padding: 7px 15px;
+}
+.site-nav_link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+}
+/* меню-взаимодействия */
+.site-nav_item:hover .site-nav_link {
+    background-color: #f7f6f3;
+    color: #323232;
+    border-radius: 15px;
+}
+.site-nav_item:active .site-nav_link {
+    box-shadow: inset 0 2px 1px #696969;
+}
+.site-nav_item:hover .site-nav-sub {
+    display: block;
+}
+/* выпадашка */
+.site-nav-sub {
+    z-index: 5;
+    position: absolute;
+    display: none;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0,0,0,.4);
+    width: 143px;
+    overflow: hidden;
+}
+.site-nav-sub a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    white-space: normal;
+    padding: 8px 5px 8px 22px;
+}
+.site-nav-sub .sub-first {
+    font-weight: 700;
+    position: relative;
+    padding-top: 11px;
+    padding-bottom: 13px;
+}
+.sub-first::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+    left: 6px;
+    height: 1px;
+    background-color: rgba(53,53,53,.2);
+}
+/* выпадашка-действия */
+.site-nav-sub li a:hover {
+    background-color: #fbded8;
+}
+.site-nav-sub a:active {
+    background-color: #f6b5a5;
+}
+/* юзер меню */
+.user-nav {
+    flex-grow: 0;
+    display: flex;
+    margin-top: 12px;
+}
+.user-nav a {
+    position: relative;
+    display: flex;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-left: 8px;
+}
+.login-btn svg {
+    margin-right: 6px;
+}
+.basket-btn svg {
+    margin-left: -10px;
+    margin-right: 6px;
+}
+.search-btn {
+    width: 32px;
+    border-radius: 50%;
+}
+.login-btn {
+    min-width: 92px;
+}
+.basket-btn {
+    min-width: 117px;
+}
+/* юзер-действия */
+.user-nav_link:hover g {
+    fill: #000;
+}
+.user-nav_link:hover,
+.user-nav_link:active{
+    color: #323232;
+    background: #fff;
+}
+
+/* .main-nav {
     display: flex;
 }
 .site-nav,
@@ -78,7 +196,7 @@ a {
 }
 .site-nav_item {
     position: relative;
-    box-sizing: border-box;
+
 }
 .site-nav_link {
     display: block;
@@ -87,7 +205,6 @@ a {
     font-weight: 700;
     color: #fff;
     padding: 7px 15px;
-    background: linear-gradient(to top, rgba(63, 81, 181, 0.3) 1px, transparent 1px);
 }
 .site-nav_link:hover {
     color: #333333;
@@ -107,9 +224,9 @@ a {
     border-radius: 30px;
     background-color: #d07058;
 }
-/* выпадающая менюшка */
+
 .site-nav-sub {
-    display: none;
+    display: block;
     position: absolute;
     top: 32px;
     box-sizing: border-box;
@@ -122,10 +239,6 @@ a {
     background: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
-}
-.site-nav_link:hover + .site-nav-sub,
-.site-nav-sub {
-    display: block;
 }
 .site-nav-sub a {
     display: block;
@@ -153,7 +266,7 @@ a {
 .site-nav-sub a:active {
     background: #f6b5a5;
 }
-/* User menu */
+
 .user-nav {
     width: 267px;
     display: flex;
@@ -223,7 +336,7 @@ a {
 .login-link:active {
     color: #e84d37;
     border-bottom: 1px solid rgba(232, 77 , 55, 0.3);
-}
+} */
 /* График телефон */
 .header-bottom {
     display: flex;
@@ -249,6 +362,7 @@ a {
     display: flex;
     justify-content: flex-start;
     margin: 20px 0 0;
+    
 }
 .breadcrumbs li {
     padding-right: 18px;
@@ -394,14 +508,17 @@ input[type=checkbox]:checked+label::before {
 
 }
 /* слайдер */
-.slide {
-    display: none;
-}
 .slider {
     position: relative;
     padding-top: 280px;
     text-align: center;
-    margin-bottom: 50px; 
+    margin: 0 2.3% 40px;
+}
+.slide img {
+    position: absolute;
+    bottom: -60px;
+    left: 250px;
+    z-index: 1;
 }
 .slider ul{
     margin: 0;
@@ -411,24 +528,28 @@ input[type=checkbox]:checked+label::before {
     list-style: none;
 }
 .slider-title {
+    position: relative;
     width: 700px;
-    margin: 0 auto;
-    margin-bottom: 27px;
+    margin: 0 auto 30px;
     font-size: 60px;
     line-height: 60px;
     color: #fff;
     text-align: center;
+    display: block;
+    z-index: 5;
 } 
 .slide_btn {
-padding: 12px 40px;
+    position: relative;
+    display: inline-block;
+    padding: 12px 40px;
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
+    z-index: 5;
 }
 .slider-control {
     position: absolute;
-    bottom: 10px;
-    left: 20px;
+    bottom: 20px;
     z-index: 20;
     font-size: 0;
 }
@@ -440,28 +561,6 @@ padding: 12px 40px;
     border: 2px solid #fff;
     border-radius: 50%;
 }
-#prod1:checked ~ .site-wrapper #slide1,
-#prod2:checked ~ .site-wrapper #slide2,
-#prod3:checked ~ .site-wrapper #slide3 {
-    display: block;
-}
-#prod1:checked ~ .site-wrapper label[for="prod1"],
-#prod2:checked ~ .site-wrapper label[for="prod2"],
-#prod3:checked ~ .site-wrapper label[for="prod3"] {
-    background-color: #ffffff;
-}
-#prod1:checked ~ .site-wrapper {
-    background-color: #849d8f;
-    background-image: url("../img/slide-krem-brule-malina.png");
-}  
-#prod2:checked ~ .site-wrapper {
-    background-color: #8996a6;
-    background-image: url("../img/slide-shokolad-limon.png");
-}
-#prod3:checked ~ .site-wrapper {
-    background-color: #9d8b84;
-    background-image: url("../img/slide-pomadka-klubnika.png");
-}
 /* Красные кнопки */
 .btn {
     text-shadow: 0 2px 5px #a0200b;
@@ -470,6 +569,7 @@ padding: 12px 40px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.6);
     border-radius: 50px;
     background: linear-gradient(0deg, #e74a35, #f26843);
+    border: none;
 }
 .btn:hover {
     box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -480,18 +580,24 @@ padding: 12px 40px;
     background: linear-gradient(0deg, #e1613e, #d74632);
 }
 /* Акции */
+.promo {
+    padding: 0 2.3%;
+    display: flex;
+    position: relative;
+    z-index: 5;
+}
 .malinka {
     background: no-repeat #7d132a url(../img/promo-klubnika.jpg);
+    margin-right: 1.1%
 }
 .shokoladki {
     background: no-repeat #492d20 url(../img/promo-shokolad.jpg);
+    margin-left: 1.1%;
 }
 .malinka h2,
 .shokoladki h2{
     margin: 0;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 0;
+    margin-bottom: 10px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -499,12 +605,6 @@ padding: 12px 40px;
 }
 .malinka p,
 .shokoladki p{
-    margin: 0;
-    margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 110px;
-    padding: 0;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
@@ -512,8 +612,11 @@ padding: 12px 40px;
 }
 .malinka,
 .shokoladki {
+    padding: 15px 20px 93px;
+    margin-bottom: 40px;
     position: relative;
     border-radius: 15px;
+    width: 560px;
 }
 .promo-btn {
     font-size: 18px;
@@ -523,9 +626,6 @@ padding: 12px 40px;
     position: absolute;
     bottom: 20px;
     right: 20px;
-}
-.promo {
-    margin-bottom: 40px;
 }
 /* Продукция */
 .products {
@@ -633,6 +733,7 @@ padding: 12px 40px;
 .about_us {
     margin: 0 2.3%;
     background: #ede0c8 url(../img/bg-about.jpg);
+    padding: 15px 0;
     border-radius: 15px;
     margin-bottom: 40px;
 }
@@ -642,17 +743,16 @@ padding: 12px 40px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
-    padding-top: 25px;
-    padding-left:  20px;
-    padding-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+    padding-left: 20px;
 }
 .about {
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 20px;
+    justify-content: flex-start;
 }
 .about_text {
     list-style: none;
@@ -660,15 +760,15 @@ padding: 12px 40px;
     line-height: 22px;
     font-weight: 400;
     width: 480px;
-    padding-left: 80px;
-    padding-bottom: 22px;
+
     position: relative;
+    padding: 12px 8px 10px 76px;
 }
 .about_text::before {
     content: "";
     display: block;
     position: absolute;
-    top: -15px;
+    top: 0;
     left: 20px;
     width: 49px;
     height: 49px;
@@ -687,14 +787,16 @@ padding: 12px 40px;
 }
 
 /* блог */
-.blog,
-.subscribe-wrapper {
-    width: 540px;
-}
 .news {
     margin: 0 2.3%;
     display: flex;
     margin-bottom: 40px;
+}
+.blog {
+    width: 520px;
+}
+.subscribe-wrapper {
+    width: 560px;
 }
 .blog {
     background: #fff url(../img/blog-klubnika.jpg) no-repeat 100% 0;
@@ -716,19 +818,13 @@ padding: 12px 40px;
     font-weight: 700;
     color: #323232;
     text-decoration: underline;
-    
-
-}
-.blog,
-.subscribe-wrapper {
-    width: 560px;
 }
 /* Подписка */
 .subscribe-wrapper {
     box-sizing: border-box;
     background:
-    repeating-linear-gradient(135deg, 
-    #92cdff 0, #92cdff 7px, #f8f7f4 0, #f8f7f4 14px, #fe9e90 0, #fe9e90 21px, #f8f7f4 0, #f8f7f4 28px);
+        repeating-linear-gradient(135deg, 
+        #92cdff 0, #92cdff 7px, #f8f7f4 0, #f8f7f4 14px, #fe9e90 0, #fe9e90 21px, #f8f7f4 0, #f8f7f4 28px);
     border-radius: 15px;  
     margin-left: 1.1%;
 }
@@ -739,6 +835,7 @@ padding: 12px 40px;
     margin: 5px;
     border-radius: 10px;
     padding: 15px 23px 75px;
+    min-height: 210px;
 }
 .subscribe-form {
     position: absolute;
@@ -747,6 +844,7 @@ padding: 12px 40px;
     box-sizing: border-box;
 }
 .subscribe p {
+    color: #5a5a5a;
     margin: 16px 0;
 
 }
@@ -760,9 +858,7 @@ padding: 12px 40px;
     margin-top: 20px;
     margin-left: 10px;
 }
-.btn {
-    border: none;
-}
+
 /* map */
 /* contacts */
 .contacts_content{
@@ -783,11 +879,7 @@ padding: 12px 40px;
 .contacts-time{
     line-height: 22px;
 }
-.feedback_title {
-    font-size: 44px;
-    line-height: 28px;
-    font-weight: 500;
-}
+
 /* footer */
 
 .main-footer {
@@ -795,7 +887,7 @@ padding: 12px 40px;
     justify-content: space-around;
     margin: 0 2.3%;
     padding-top: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
 }
 .footer-socials,
 .footer-inf {
@@ -860,7 +952,7 @@ padding: 12px 40px;
     margin: 0 1.1%;
 }
 .footer-inf {
-    margin: 12px     auto 0;
+    margin: 12px auto 0;
 }
 .footer-inf_link{
     font-size: 13px;
@@ -960,8 +1052,14 @@ padding: 12px 40px;
     border-radius: 50%;
 }
 .map {
+    width: 100%;
+    height: 430px;
+}
+.map .wrapper {
     position: relative;
-    margin-bottom: -5px;
+}
+.contacts-map {
+    margin: 0, 2.3%;
 }
 .contacts {
     position: absolute;
@@ -984,34 +1082,6 @@ padding: 12px 40px;
     white-space: nowrap;
 
 }
-/* сетка */
-
-.promo {
-    padding: 0 2.3%;
-    display: flex;
-}
-.malinka {
-    margin-right: 1.1%
-}
-.shokoladki {
-    margin-left: 1.1%;
-}
-.malinka,
-.shokoladki {
-    width: 560px;
-}
-
-
-
-.map {
-    width: auto;
-}
-
-/* Формы */
-/* микрофлексы */
-
-
-
 body input[type=email],
 body input[type=password],
 body input[type=search],
@@ -1047,4 +1117,69 @@ textarea:focus {
     font-weight:700;
     border:2px solid rgba(46,136,228,.52);
     outline:none;
+}
+.feedback-popup {
+    position: fixed;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    display: none;
+    box-sizing: border-box;
+    width: 478px;
+    height: 442px;
+    margin-top: -221px;
+    margin-left: -239px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: #323232;
+    background-color: #f8f7f4;
+    border-radius: 10px;
+}
+.feedback_title {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+}
+.feedback-form {
+    padding: 0;
+    margin: 0;
+}
+.feedback-form input {
+    width: 267px;
+}
+.feedback-form textarea {
+    width: 428px;
+    height: 155px;
+}
+.feedback-form_btn {
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 15px;
+    float: right;
+}
+.feedback-popup_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 17px;
+    height: 17px;
+    background: url("../img/x-big.svg") no-repeat;
+    border: none;
+}
+body {
+    position: relative;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.3);
 }
