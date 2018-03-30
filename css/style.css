@@ -85,6 +85,7 @@ a {
     font-size: 16px;
     line-height: 18px;
     color: #fff;
+    cursor: pointer;
 }
 .site-nav_link::after {
     content: "";
@@ -98,23 +99,21 @@ a {
     color: #323232;
     border-radius: 15px;
 }
-.site-nav_item:active .site-nav_link {
+.site-nav_link:active {
     box-shadow: inset 0 2px 1px #696969;
 }
 .site-nav_item:hover .site-nav-sub {
     display: block;
 }
-.site-nav_item .nav-active,
-.site-nav_item .nav-active:hover,
-.site-nav_item .nav-active:active {
+.site-nav_link--active {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    cursor: pointer;
     background-color: #d07058;
     color: #fff;
     border-radius: 15px;
-}
-.nav-active::after,
-.nav-active:hover::after,
-.nav-active:active::after {
-    background-color: rgba(255,255,255,0.0);
 }
 /* выпадашка */
 .site-nav-sub {
@@ -128,6 +127,9 @@ a {
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
     width: 143px;
     overflow: hidden;
+}
+.site-nav-sub li {
+    cursor: pointer;
 }
 .site-nav-sub a {
     font-size: 14px;
@@ -180,6 +182,7 @@ a {
     align-items: center;
     height: 32px;
     margin-left: 8px;
+    cursor: pointer;
 }
 .login-btn svg {
     margin-right: 6px;
@@ -604,7 +607,8 @@ a {
     border: 2px solid #fff;
     border-radius: 20px;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);  
+    cursor: pointer;
 }
 .filter_btn:hover {
     color: #000;
@@ -632,6 +636,7 @@ a {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    cursor: pointer;
 }
 .filter select:hover {
     color: #000;
@@ -649,6 +654,7 @@ input[type=range] {
     padding-right: 5px;
     padding-left: 5px;
     vertical-align: middle;
+    cursor: pointer;
 }
 .filters .filter-fat {
     font-size: 16px;
@@ -668,6 +674,7 @@ input[type=radio]+label::before {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 21px 21px;
+    cursor: pointer;
 }
 .filter-fat label:last-child {
     margin-right: 0px;
@@ -694,6 +701,7 @@ input[type=checkbox]+label::before {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 21px 21px;
+    cursor: pointer;
 }
 input[type=checkbox]:checked+label::before {
     margin-right: 8px;
@@ -794,6 +802,7 @@ input[type=checkbox]:hover+label::before {
     background: linear-gradient(0deg, #e74a35, #f26843);
     border: none;
     white-space: nowrap;
+    cursor: pointer;
 }
 .btn:hover {
     box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -1408,6 +1417,7 @@ textarea:focus {
     height: 17px;
     background: url("../img/cross-big.svg") no-repeat;
     border: none;
+    cursor: pointer;
 }
 body {
     position: relative;
@@ -1425,3 +1435,24 @@ body {
 .modal-show {
     display: block;
 }
+.modal-feedback-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }

@@ -61,8 +61,8 @@ slide_control3.addEventListener("click", function(){
     slide_control1.classList.remove("control-active")
 });
 
-popuplink.addEventListener("click", function (evt) {evt.preventDefault(),popup.classList.add("modal-show"),overlay.classList.add("modal-show")});
-popupclose.addEventListener("click", function (evt) {evt.preventDefault(),popup.classList.remove("modal-show"),overlay.classList.remove("modal-show")});
+popuplink.addEventListener("click", function (evt) {evt.preventDefault(),popup.classList.add("modal-feedback-show"),overlay.classList.add("modal-show")});
+popupclose.addEventListener("click", function (evt) {evt.preventDefault(),popup.classList.remove("modal-feedback-show"),overlay.classList.remove("modal-show")});
 
 search_btn.addEventListener("click",function(evt){a.preventDefault()});
 search.addEventListener("mouseover",function(evt){evt.preventDefault(),search_form.classList.add("modal-show"),search_field.focus()});
