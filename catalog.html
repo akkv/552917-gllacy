@@ -44,11 +44,13 @@
                   <input class="login_email" type="email" name="email" id="email" placeholder="Электронная почта">
                   <label class="visually-hidden" for="password">Пароль</label>
                   <input class="login_link" type="password" name="password" id="password" placeholder="Пароль">
-                  <button class="btn login-form_btn">Войти</button>
-                  <p class="login-links">
-                    <a class="login-link" href="#">Забыли пароль?</a>
-                    <a class="login-link" href="#">Новая регистрация</a>
-                  </p>
+                  <div class="login-btn-wrapper">
+                    <button class="btn login-form_btn" type="submit">Войти</button>
+                    <p class="login-links">
+                      <a class="login-link" href="#">Забыли пароль?</a>
+                      <a class="login-link" href="#">Новая регистрация</a>
+                    </p>
+                  </div>
                 </form>
               </li>
               <li class="basket">
@@ -131,7 +133,7 @@
                   <input class="visually-hidden" type="checkbox" name="filler" id="jam" value="jam"><label for="jam">джемы</label>
                 </div>
               </fieldset>
-              <button class="filter_btn">Применить</button>
+              <button type="submit" class="filter_btn">Применить</button>
             </form>
           </section>
           <section class="products">
@@ -277,16 +279,12 @@
             <a class="social vk" href="#">Vkontakte</a>
           </div>
           <div class="footer-inf_wrapper">
-            <table class="footer-inf">
-              <tr>
-                <td><a class="footer-inf_link heart" href="#">Для поставщиков</a></td>
-                <td><a class="footer-inf_link" href="#">Наши документы</a></td>
-              </tr>
-              <tr>
-                <td><a class="footer-inf_link" href="#">О производстве</a></td>
-                <td><a class="footer-inf_link" href="#">Экологические стандарты</a></td>
-              </tr>
-            </table>
+            <ul class="footer-inf">
+              <li class="footer-inf_item"><a class="footer-inf_link heart" href="#">Для поставщиков</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">Наши документы</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">О производстве</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">Экологические стандарты</a></li>
+            </ul>
           </div>
           <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
             <img class="copyright_logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="html Academy">

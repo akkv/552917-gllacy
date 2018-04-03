@@ -44,11 +44,13 @@
                     <input class="login_email" type="email" name="email" id="email" placeholder="Электронная почта">
                     <label class="visually-hidden" for="password">Пароль</label>
                     <input class="login_link" type="password" name="password" id="password" placeholder="Пароль">
-                    <button class="btn login-form_btn">Войти</button>
+                    <div class="login-btn-wrapper">
+                    <button class="btn login-form_btn" type="submit">Войти</button>
                     <p class="login-links">
                       <a class="login-link" href="#">Забыли пароль?</a>
                       <a class="login-link" href="#">Новая регистрация</a>
                     </p>
+                  </div>
                   </form>
                 </li>
                 <li class="user-nav_item">
@@ -152,7 +154,7 @@
           <div class="news">
             <article class="blog">
               <h2>Новое в нашем блоге</h2>
-              <a class="blog_link" href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
+              <a class="blog_link" href="#">10 способов сервировки<br> фруктовых щербетов к <br> столу</a>
             </article>
             <div class="subscribe-wrapper">
               <section class="subscribe">
@@ -161,7 +163,7 @@
                   спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                   <input class="subscribe_email" type="email" placeholder="Электронная почта">
-                  <button class="btn subscribe_btn">Отправить</button>
+                  <button class="btn subscribe_btn" type="submit">Отправить</button>
                 </form>
               </section>
             </div>
@@ -183,7 +185,7 @@
                 <span class="contacts-phone">8 812 450-25-25</span><br>
                 <span class="contacts-time">(с 10 до 20 ежедневно)</span>
               </p>
-              <a class="btn feedback_btn">Форма обратной связи</a>
+              <a class="btn feedback_btn" href="#">Форма обратной связи</a>
             </div>
           </div>
         </div>
@@ -198,16 +200,12 @@
             <a class="social vk" href="#">Vkontakte</a>
           </div>
           <div class="footer-inf_wrapper">
-            <table class="footer-inf">
-              <tr>
-                <td><a class="footer-inf_link heart" href="#">Для поставщиков</a></td>
-                <td><a class="footer-inf_link" href="#">Наши документы</a></td>
-              </tr>
-              <tr>
-                <td><a class="footer-inf_link" href="#">О производстве</a></td>
-                <td><a class="footer-inf_link" href="#">Экологические стандарты</a></td>
-              </tr>
-            </table>
+            <ul class="footer-inf">
+              <li class="footer-inf_item"><a class="footer-inf_link heart" href="#">Для поставщиков</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">Наши документы</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">О производстве</a></li>
+              <li class="footer-inf_item"><a class="footer-inf_link" href="#">Экологические стандарты</a></li>
+            </ul>
           </div>
           <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
             <img class="copyright_logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="html Academy">
@@ -226,7 +224,7 @@
           <label class="visually-hidden" for="feedback_email">Ваша пота для ответа?</label>
           <input class="feedback_email" type="email" name="feedback_email" id="feedback_email" placeholder="Ваша почта для ответа?">
           <textarea class="feedback_text" name="feedback_text" placeholder="Напишите что-нибудь..."></textarea>
-          <button class="btn feedback-form_btn">Отправить</button>
+          <button class="btn feedback-form_btn" type="submit">Отправить</button>
         </fieldset>
       </form>
     </div>
