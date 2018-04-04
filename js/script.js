@@ -1,6 +1,6 @@
-var popuplink = document.querySelector(".feedback_btn");
+var popuplink = document.querySelector(".feedback-btn");
 var popup = document.querySelector(".feedback-popup");
-var popupclose = popup.querySelector(".feedback-popup_close");
+var popupclose = popup.querySelector(".feedback-popup-close");
 var overlay = document.querySelector(".modal-overlay");
 
 var search = document.querySelector(".search");
